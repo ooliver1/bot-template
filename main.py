@@ -9,11 +9,9 @@ from botbase import BotBase
 
 # REMOVE ON WINDOWS
 import uvloop  # type: ignore
-
 # REMOVE ON WINDOWS
 
 
-DEFAULT_PREFIX = "."
 # REMOVE ON WINDOWS
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 # REMOVE ON WINDOWS
@@ -28,6 +26,7 @@ class MyBot(BotBase):
 intents = nextcord.Intents.none()
 intents.guilds = True
 intents.messages = True
+# FIXME: any more intents needed?
 bot = MyBot(
     intents=intents,
 )
@@ -38,4 +37,5 @@ for filename in os.listdir("./cogs"):
         bot.load_extension(f"cogs.{filename[:-3]}")
 
 
-bot.run(os.getenv("TOKEN"))
+if __name__ == "__main__":
+    bot.run(os.getenv("TOKEN"))
