@@ -2,7 +2,7 @@ FROM --platform=amd64 python:3.10-slim-buster
 
 WORKDIR /bot
 
-RUN apt update && apt install gcc
+RUN apt update && apt install gcc -y
 
 RUN pip install poetry
 
