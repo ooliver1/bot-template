@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  bot:
+    container_name: botname
+    env_file: .env
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./logs:/bot/logs
+      - /var/run/postgresql:/var/run/postgresql
+      - ./botunderscorename:/bot/botunderscorename
