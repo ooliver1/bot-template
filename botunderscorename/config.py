@@ -1,9 +1,9 @@
 from botbase import Emojis
 
 
-# db_enabled = True  # default
+# db_enabled = False  # default  # FIXME: enable when setup
 # db_url = "postgres://usrname:passwd@ip.addr/botname"  # for dev
-db_name = "botname"  # FIXME: botname
+# db_name = "botname"  # FIXME: botname
 # db_user = "ooliver"  # default
 # db_host = "localhost"  # default
 # version = "0.0.0"  # default
