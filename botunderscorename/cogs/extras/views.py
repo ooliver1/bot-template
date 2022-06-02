@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# TODO: move into botbase
+
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
