@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+
 from __future__ import annotations
 
 from asyncio import set_event_loop_policy
