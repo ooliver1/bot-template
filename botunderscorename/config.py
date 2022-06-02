@@ -26,6 +26,6 @@ prefix = ["!"]  # FIXME: actual prefix
 # helptitle = "Help Me {name}!"  # default
 # helpfields = {}  # default
 # helpinsert = ""  # default
-emojiset = Emojis({"in/dex": "..."})  # FIXME: emoji set for help select
+emojiset = Emojis({"index": "..."})  # FIXME: emoji set for help select
 # logchannel = None  # default
 # guild_ids = None  # default
