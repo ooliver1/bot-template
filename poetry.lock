@@ -286,7 +286,7 @@ docs = ["sphinx", "sphinxcontrib-trio", "sphinx-book-theme"]
 
 [[package]]
 name = "ooliver-botbase"
-version = "1.14.7"
+version = "1.16.0"
 description = "A personal nextcord bot base package for bots."
 category = "main"
 optional = false
@@ -415,7 +415,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "0ea9124d293a1c3e9613565a7e0c24ad30164b2d10883cf32524253bc797fe19"
+content-hash = "b24a285227bfbf4f3590dc7b27c402acc563647efb0bba55bab3284277eddb0c"
 
 [metadata.files]
 aiodns = [
@@ -881,8 +881,8 @@ nextcord-ext-menus = [
     {file = "nextcord_ext_menus-1.5.2-py3-none-any.whl", hash = "sha256:8843fc7a056a6325d100f333b28aa44b32f6fa94c4efaabb5959897432b0d3df"},
 ]
 ooliver-botbase = [
-    {file = "ooliver-botbase-1.14.7.tar.gz", hash = "sha256:02d2117234d1b4a799c3b10af6152218362a93991a28b5c3f19e424490f7b298"},
-    {file = "ooliver_botbase-1.14.7-py3-none-any.whl", hash = "sha256:6408e56683c203dd59ae6cf2b99ba4a9cd00b69342551e60ad655f619ecc08f5"},
+    {file = "ooliver-botbase-1.16.0.tar.gz", hash = "sha256:fd63f973f0428e08689065a6934231fe7eb9bf1406ddfd52f0761a0376e1db90"},
+    {file = "ooliver_botbase-1.16.0-py3-none-any.whl", hash = "sha256:5ac1f35b680552b54e84808ef8824b1db12538f10ba2a9bde685670a13ec8593"},
 ]
 orjson = [
     {file = "orjson-3.6.8-cp310-cp310-macosx_10_7_x86_64.whl", hash = "sha256:3a287a650458de2211db03681b71c3e5cb2212b62f17a39df8ad99fc54855d0f"},
