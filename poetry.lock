@@ -255,7 +255,7 @@ python-versions = "*"
 
 [[package]]
 name = "nextcord"
-version = "2.0.0rc2"
+version = "2.0.0"
 description = "A Python wrapper for the Discord API forked from discord.py"
 category = "main"
 optional = false
@@ -415,7 +415,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "c4238a6a619abbfc45d0ccfb1cc997d81074de4728f6746785b71d66f02d3ba1"
+content-hash = "1b3e51c7ebc456ca61e284d4d437ffe69678deecefb82444785296222d4e3554"
 
 [metadata.files]
 aiodns = []
