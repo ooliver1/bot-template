@@ -367,11 +367,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "python-dotenv"
-version = "0.20.0"
+version = "0.21.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
 category = "main"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.7"
 
 [package.extras]
 cli = ["click (>=5.0)"]
@@ -439,7 +439,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "e83d4222e05218bcd142835a64dfdae1e3b7a772701d22131e88d101c80f7646"
+content-hash = "09c2b11e956e55910813c494da0444718e5bff293b2f0d2041ad4f1b82101bad"
 
 [metadata.files]
 aiodns = [
@@ -1028,8 +1028,8 @@ pycparser = [
     {file = "pycparser-2.21.tar.gz", hash = "sha256:e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"},
 ]
 python-dotenv = [
-    {file = "python-dotenv-0.20.0.tar.gz", hash = "sha256:b7e3b04a59693c42c36f9ab1cc2acc46fa5df8c78e178fc33a8d4cd05c8d498f"},
-    {file = "python_dotenv-0.20.0-py3-none-any.whl", hash = "sha256:d92a187be61fe482e4fd675b6d52200e7be63a12b724abbf931a40ce4fa92938"},
+    {file = "python-dotenv-0.21.0.tar.gz", hash = "sha256:b77d08274639e3d34145dfa6c7008e66df0f04b7be7a75fd0d5292c191d79045"},
+    {file = "python_dotenv-0.21.0-py3-none-any.whl", hash = "sha256:1684eb44636dd462b66c3ee016599815514527ad99965de77f43e0944634a7e5"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
