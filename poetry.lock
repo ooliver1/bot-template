@@ -18,9 +18,12 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
+aiodns = {version = "*", optional = true, markers = "extra == \"speedups\""}
 aiosignal = ">=1.1.2"
 async-timeout = ">=4.0.0a3,<5.0"
 attrs = ">=17.3.0"
+Brotli = {version = "*", optional = true, markers = "extra == \"speedups\""}
+cchardet = {version = "*", optional = true, markers = "extra == \"speedups\""}
 charset-normalizer = ">=2.0,<3.0"
 frozenlist = ">=1.1.1"
 multidict = ">=4.5,<7.0"
@@ -256,23 +259,23 @@ python-versions = "*"
 
 [[package]]
 name = "nextcord"
-version = "2.1.0"
+version = "2.3.2"
 description = "A Python wrapper for the Discord API forked from discord.py"
 category = "main"
 optional = false
 python-versions = ">=3.8.0"
 
 [package.dependencies]
-aiodns = {version = ">=1.1", optional = true, markers = "extra == \"speed\""}
-aiohttp = ">=3.8.0,<4.0.0"
-Brotli = {version = "*", optional = true, markers = "extra == \"speed\""}
-cchardet = {version = "*", optional = true, markers = "extra == \"speed\""}
+aiohttp = [
+    {version = ">=3.8.0,<4.0.0"},
+    {version = "*", extras = ["speedups"], optional = true, markers = "extra == \"speed\""},
+]
 orjson = {version = ">=3.5.4", optional = true, markers = "extra == \"speed\""}
 typing_extensions = ">=4.2.0,<5"
 
 [package.extras]
-docs = ["sphinx (==5.0.1)", "sphinxcontrib-websupport", "sphinxcontrib_trio (==1.1.2)", "typing_extensions (>=4.2.0,<5)"]
-speed = ["Brotli", "aiodns (>=1.1)", "cchardet", "orjson (>=3.5.4)"]
+docs = ["sphinx (==5.2.3)", "sphinxcontrib-websupport", "sphinxcontrib_trio (==1.1.2)", "typing_extensions (>=4.2.0,<5)"]
+speed = ["aiohttp[speedups]", "orjson (>=3.5.4)"]
 voice = ["PyNaCl (>=1.3.0,<1.5)"]
 
 [[package]]
@@ -436,7 +439,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "aa22f72c313497f7d16c06ae0cc218fb8bd1cebd9832b7a5c3341827031fc488"
+content-hash = "838d49a97ed7536baef056c1cc237728f68bc18e73d3f53a7453e94740e96994"
 
 [metadata.files]
 aiodns = [
@@ -901,7 +904,7 @@ mypy-extensions = [
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
 ]
 nextcord = [
-    {file = "nextcord-2.1.0.tar.gz", hash = "sha256:1402662d334e452d56a312240f8d4acfeb26d29e4a320cd8767b9a96e2f461a3"},
+    {file = "nextcord-2.3.2.tar.gz", hash = "sha256:5b6295b29e3a27aadc2d1db1ff8356d8671f7100c14e2c6d324b151070630b18"},
 ]
 nextcord-ext-menus = [
     {file = "nextcord-ext-menus-1.5.2.tar.gz", hash = "sha256:92e0208fcd6249119b97fd67bcda61337e32885292d42bc862d5d767bfee150f"},
