@@ -1,0 +1,7 @@
+*
+!botunderscorename/
+!entrypoint.sh
+!pyproject.toml
+!poetry.lock
+!alembic.ini
+!alembic/

@@ -1,14 +1,27 @@
 version: "3"
 
+x-restart-policy:
+  &restart-policy
+  restart: unless-stopped
+
 services:
   bot:
-    container_name: botname
-    env_file: .env
-    restart: unless-stopped
-    build:
-      context: .
-      dockerfile: Dockerfile
+    <<: *restart-policy
+    depends_on:
+      - postgres
+    build: .
     volumes:
       - ./logs:/bot/logs
-      - /var/run/postgresql:/var/run/postgresql
-      - ./botunderscorename:/bot/botunderscorename
+    environment:
+      TOKEN: $TOKEN
+      DB_URI: postgresql://postgres:postgres@postgres:5432/bot
+  postgres:
+    <<: *restart-policy
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: bot
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data

@@ -2,26 +2,14 @@
 
 from __future__ import annotations
 
-from asyncio import set_event_loop_policy
-from os import getenv
+from os import environ
 
-from botbase import BotBase
-from dotenv import load_dotenv
-from nextcord import Intents
-from uvloop import EventLoopPolicy
+import uvloop
 
-set_event_loop_policy(EventLoopPolicy())
-load_dotenv()
+from .bot import BotName
 
+bot = BotName()
 
-class MyBot(BotBase):
-    ...
-
-
-intents = Intents.none()
-intents.guilds = True
-intents.messages = True
-bot = MyBot(intents=intents)
-
-
-bot.run(getenv("TOKEN"))
+if __name__ == "__main__":
+    uvloop.install()
+    bot.run(environ["TOKEN"])

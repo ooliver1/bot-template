@@ -1,16 +1,15 @@
-FROM --platform=amd64 python:3.10-slim-buster
+FROM python:3.11-slim-bullseye
 
 WORKDIR /bot
 
-RUN apt update && apt install gcc build-essential -y
+RUN apt-get update && apt-get install git netcat-openbsd iproute2 -yqq && rm -rf /var/lib/apt/lists/*
 
 RUN pip install poetry
 
 COPY pyproject.toml poetry.lock ./
 
-RUN poetry install --no-root --no-dev
+RUN poetry install --no-root --only main
 
 COPY . .
 
-ENTRYPOINT ["poetry", "run", "python3"]
-CMD ["-m", "botunderscorename"]
+CMD ["sh", "entrypoint.sh"]
