@@ -10,6 +10,7 @@ services:
     depends_on:
       - postgres
     build: .
+    pull_policy: build
     volumes:
       - ./logs:/bot/logs
     environment:
