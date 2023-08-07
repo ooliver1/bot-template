@@ -10,7 +10,7 @@ python = "^3.11"
 nextcord = { extras = ["speed"], version = "^2.3.2" }
 uvloop = "^0.17.0"
 ooliver-botbase = { version = "^2.0.2", extras = ["db"] }
-alembic = "^1.10.4"
+alembic = "^1.11.2"
 taskipy = "^1.10.4"
 delarva = { git = "https://github.com/ooliver1/delarva" }
 
